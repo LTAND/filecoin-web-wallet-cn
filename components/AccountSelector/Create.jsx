@@ -29,7 +29,7 @@ const LoadingCard = () => (
     <Box display='flex' flexDirection='row'>
       <Loading />
       <Text ml={2} lineHeight='.5'>
-        Loading
+        加载中
       </Text>
     </Box>
   </Card>
@@ -64,11 +64,11 @@ const Create = ({ onClick, loading, nextAccountIndex, errorMsg }) => {
             borderColor='core.primary'
             color='core.primary'
           />
-          <Title ml={2}>Create</Title>
+          <Title ml={2}>创建</Title>
         </MenuItem>
         <MenuItem>
           <Text textAlign='left'>
-            Click here to create account #{nextAccountIndex}.
+            点击创建账号 #{nextAccountIndex}.
           </Text>
         </MenuItem>
       </Menu>

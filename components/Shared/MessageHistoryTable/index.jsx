@@ -27,9 +27,9 @@ const MessageHistoryTable = ({
       <Box display='flex' alignItems='center' justifyContent='space-between'>
         <Box display='flex' alignItems='center' justifyContent='flex-start' iv>
           <Glyph mr={3} color='core.primary' acronym='Tx' />
-          <Text color='core.primary'>Transaction History</Text>
+          <Text color='core.primary'>交易的历史记录</Text>
         </Box>
-        <Button variant='secondary' onClick={refresh} title='Refresh' />
+        <Button variant='secondary' onClick={refresh} title='刷新' />
       </Box>
       {loading ? (
         <LoadingScreen />

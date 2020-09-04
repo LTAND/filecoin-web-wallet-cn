@@ -15,18 +15,17 @@ const Back = ({ setReturningHome }) => {
         width='100%'
       >
         <Glyph acronym='Bk' />
-        <Text>Do you really wish to exit onboarding?</Text>
-        <Text>You will be taken back to the home screen.</Text>
+        <Text>你是否要退出到主页</Text>
       </Card>
       <Box mt={6} display='flex' justifyContent='space-between' width='100%'>
         <Button
-          title='No, keep onboarding'
+          title='返回'
           onClick={() => setReturningHome(false)}
           variant='secondary'
           mr={2}
         />
         <Button
-          title='Yes, take me home'
+          title='退出到主页'
           onClick={() => resetState()}
           variant='primary'
           ml={2}

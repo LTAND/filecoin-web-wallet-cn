@@ -210,7 +210,7 @@ const AccountSelector = ({ premainnetInvestor }) => {
                 ) : (
                   <Text>
                     Your single{' '}
-                    {wallet.type === LEDGER ? 'Ledger Device ' : 'seed phrase'}{' '}
+                    {wallet.type === LEDGER ? 'Ledger Device ' : '助记词'}{' '}
                     creates hundreds of individual &quot;accounts&quot;.
                     <br />
                   </Text>

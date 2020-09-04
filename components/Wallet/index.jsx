@@ -107,7 +107,7 @@ export default () => {
             `}
             onClick={() => window.location.reload()}
           >
-            Logout
+            登出账号
           </ButtonLogout>
         </Sidebar>
         <Content>

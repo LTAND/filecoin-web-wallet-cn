@@ -25,7 +25,7 @@ const CreateWallet = ({ onClick, ...props }) => (
       <Box display='flex' alignItems='center'>
         <Glyph acronym='Sp' border={0} />
         <Text ml={4} my={0}>
-          Generate Seed Phrase
+          创建钱包助记词
         </Text>
       </Box>
     </Box>

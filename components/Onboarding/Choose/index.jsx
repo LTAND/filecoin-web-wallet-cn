@@ -52,9 +52,9 @@ export default () => {
     <>
       {localWalletType ? (
         <Warning
-          title='Warning'
-          description='We do not recommend you use this account to hold or transact significant sums of Filecoin. This account is for testing purposes only. For significant sums, Glif should only be used with a Ledger hardware wallet.'
-          linkDisplay="Why isn't it secure?"
+          title='提示'
+          description='我们不建议您使用此帐户来持有或交易大量Filecoin。此帐户仅用于测试目的。对于大笔款项，Glif仅应与Ledger硬件钱包一起使用。'
+          linkDisplay=""
           linkhref='https://coinsutra.com/security-risks-bitcoin-wallets/'
           onBack={() => setLocalWalletType(null)}
           onAccept={onChoose}
@@ -94,24 +94,8 @@ export default () => {
               textAlign='left'
             >
               <Header>
-                A lightweight interface to send and receive Filecoin
+                Filecoin轻量级钱包客户端
               </Header>
-              <Title mt={3} lineHeight='140%'>
-                <InlineBox
-                  backgroundColor='status.warning.background'
-                  color='status.warning.foreground'
-                  py={1}
-                  px={3}
-                  mr={2}
-                  my={3}
-                  fontSize={4}
-                  borderRadius={6}
-                >
-                  Remember
-                </InlineBox>
-                For your protection, please check your browser&apos;s URL bar
-                that you&apos;re visiting https://wallet.glif.io
-              </Title>
             </Box>
           </Box>
           <Box
@@ -132,7 +116,7 @@ export default () => {
               textAlign='center'
               flexGrow='1'
             >
-              <Text>Access via</Text>
+              {/* <Text>Access via</Text>
               <ImportWallet
                 onClick={() => onChoose(LEDGER)}
                 Icon={IconLedger}
@@ -152,7 +136,7 @@ export default () => {
                 onClick={() => router.push('/vault')}
                 glyphAcronym='Ss'
                 title='SAFT Setup'
-              />
+              /> */}
 
               {devMode && (
                 <Box
@@ -169,7 +153,7 @@ export default () => {
                   <Box display='flex' alignItems='center' m={2} px={2}>
                     <Glyph border={0} acronym='Dm' />
                     <Text ml={4} my={0}>
-                      Dev Mode
+                      用户模式
                     </Text>
                   </Box>
                   <CreateWallet
@@ -180,18 +164,18 @@ export default () => {
                   <ImportWallet
                     onClick={() => onChoose(IMPORT_MNEMONIC)}
                     glyphAcronym='Sp'
-                    title='Import Seed Phrase'
+                    title='导入钱包助记词'
                     m={2}
                   />
-                  <ImportWallet
+                  {/* <ImportWallet
                     onClick={() => onChoose(IMPORT_SINGLE_KEY)}
                     glyphAcronym='Pk'
-                    title='Import Private Key'
+                    title='导入私钥'
                     m={2}
-                  />
+                  /> */}
                   <Button
                     variant='tertiary'
-                    title='Close'
+                    title='关闭'
                     color='core.black'
                     m={2}
                     border={0}
@@ -210,7 +194,7 @@ export default () => {
                 justifySelf='flex-end'
                 onClick={() => setDevMode(true)}
                 glyphAcronym='Dm'
-                title='Dev Mode'
+                title='用户模式'
               />
             )}
           </Box>

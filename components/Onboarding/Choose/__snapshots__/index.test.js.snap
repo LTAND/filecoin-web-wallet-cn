@@ -568,9 +568,7 @@ exports[`Choosing a wallet it renders all wallet options when in dev mode 1`] = 
           color="status.warning.foreground"
           font-size="4"
         >
-          Remember
         </span>
-        For your protection, please check your browser's URL bar that you're visiting https://wallet.glif.io
       </h2>
     </div>
   </div>
@@ -1305,7 +1303,6 @@ exports[`Choosing a wallet it renders correctly 1`] = `
         >
           Remember
         </span>
-        For your protection, please check your browser's URL bar that you're visiting https://wallet.glif.io
       </h2>
     </div>
   </div>

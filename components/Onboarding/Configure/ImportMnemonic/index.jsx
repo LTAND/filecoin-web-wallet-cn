@@ -70,9 +70,8 @@ export default () => {
               m={2}
               showStepper={false}
             />
-
-            <Title mt={3}>Input, Import & Proceed</Title>
-            <Text>Please input your seed phrase below to continue </Text>
+              <Title mt={3}>输入，导入和继续</Title>
+              <Text>请在下面输入您的钱包助记词, 继续下一步</Text>
             <Input.Mnemonic
               error={mnemonicError}
               setError={setMnemonicError}
@@ -88,13 +87,13 @@ export default () => {
             justifyContent='space-between'
           >
             <Button
-              title='Back'
+              title='返回'
               onClick={() => setWalletType(null)}
               variant='secondary'
               mr={2}
             />
             <Button
-              title='Next'
+              title='下一步'
               disabled={!!(mnemonic.length === 0 || mnemonicError)}
               onClick={instantiateProvider}
               variant='primary'

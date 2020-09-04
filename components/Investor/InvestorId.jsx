@@ -51,7 +51,7 @@ const EnterInvestorId = ({ setWalletType }) => {
         width='100%'
       >
         <Button
-          title='Back'
+          title='返回'
           onClick={() => {
             setWalletType(null)
             router.replace('/')

@@ -36,7 +36,7 @@ const Mnemonic = forwardRef(
               border='none'
               onClick={() => setReveal(!reveal)}
             >
-              {reveal ? 'Hide' : 'Show'}
+              {reveal ? '隐藏' : '显示'}
             </BaseButton>
           </Box>
 
@@ -47,7 +47,7 @@ const Mnemonic = forwardRef(
               if (error) setError('')
             }}
             ref={ref}
-            label='Seed phrase'
+            label='助记词'
             onChange={e => {
               clearTimeout(timer.current)
               onChange(e)
@@ -79,7 +79,7 @@ Mnemonic.propTypes = {
 
 Mnemonic.defaultProps = {
   value: '',
-  placeholder: 'Your seed phrase',
+  placeholder: '你的助记词',
   onChange: () => {},
   setError: () => {}
 }

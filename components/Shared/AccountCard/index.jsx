@@ -76,10 +76,10 @@ const AccountCard = forwardRef(
           color='card.account.color'
         >
           <Glyph mr={3} color='card.account.color' acronym='Ac' />
-          <Text>Account</Text>
+          <Text>账号</Text>
         </Box>
         <Box color='card.account.color'>
-          <Text m={0}>Your Address</Text>
+          <Text m={0}>你的钱包地址</Text>
           <Box display='flex' alignItems='center'>
             <AccountAddress
               fontWeight={1}
@@ -110,7 +110,7 @@ const AccountCard = forwardRef(
           {walletType !== IMPORT_SINGLE_KEY && (
             <Button
               variant='tertiary'
-              title='Switch'
+              title='切换地址'
               onClick={onAccountSwitch}
               height='max-content'
               p={2}

@@ -66,7 +66,7 @@ const WarningCard = ({
           <Button
             mt={5}
             variant='primary'
-            title='I Understand'
+            title='我明白'
             onClick={onAccept}
           />
         </Box>

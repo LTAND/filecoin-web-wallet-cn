@@ -120,7 +120,7 @@ const Create = ({ initialWalkthroughStep }) => {
                   justifyContent='space-between'
                 >
                   <Button
-                    title='Back'
+                    title='返回'
                     onClick={() => {
                       if (walkthroughStep === 2) setWalkthroughStep(1)
                       else setReturningHome(true)
@@ -131,8 +131,8 @@ const Create = ({ initialWalkthroughStep }) => {
                   <Button
                     title={
                       walkthroughStep === 1
-                        ? "I've recorded my seed phrase"
-                        : 'Next'
+                          ? "我已经确认并记住助记词"
+                        : '下一步'
                     }
                     onClick={nextStep}
                     variant='primary'

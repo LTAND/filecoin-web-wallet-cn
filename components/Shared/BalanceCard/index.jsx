@@ -27,7 +27,7 @@ const BalanceCard = forwardRef(
         {...props}
       >
         <Box display='flex' flexDirection='row' justifyContent='space-between'>
-          <Label>Balance</Label>
+          <Label>余额</Label>
           <Box
             display='flex'
             flexDirection='row'
@@ -37,14 +37,14 @@ const BalanceCard = forwardRef(
               clicked={!preciseMode}
               onClick={() => setPreciseMode(false)}
             >
-              Approx.
+              大约值
             </ApproximationToggleBtn>
             <Box width={2} />
             <ApproximationToggleBtn
               clicked={preciseMode}
               onClick={() => setPreciseMode(true)}
             >
-              Exact
+              精确值
             </ApproximationToggleBtn>
           </Box>
         </Box>
@@ -73,7 +73,7 @@ const BalanceCard = forwardRef(
         <Box display='flex' justifyContent='space-between'>
           <Button
             variant='primary'
-            title='Send'
+            title='发送'
             disabled={disableButtons}
             onClick={onSend}
             flexGrow='1'

@@ -87,7 +87,7 @@ const Reveal = ({ mnemonic, valid }) => {
             Success! Please click &apos;Next&apos; to access your wallet.
           </Text>
         ) : (
-          <Text>Write down your seed phrase somewhere safe.</Text>
+            <Text>在安全的地方写下并记住您的钱包助记词。</Text>
         )}
 
         <Box display='flex' mt={[2, 0]}>
@@ -97,7 +97,7 @@ const Reveal = ({ mnemonic, valid }) => {
               setCopied(true)
             }}
             variant='secondary'
-            title={copied ? 'Copied' : 'Copy'}
+            title={copied ? '已复制' : '复制'}
             mx={2}
           />
           <DownloadButton
@@ -106,7 +106,7 @@ const Reveal = ({ mnemonic, valid }) => {
             download='dontlookhere.txt'
             href={objectUrl}
           >
-            Download
+            下载
           </DownloadButton>
         </Box>
       </Box>
