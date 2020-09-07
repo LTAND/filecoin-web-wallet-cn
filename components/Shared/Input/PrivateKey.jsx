@@ -13,7 +13,7 @@ const PrivateKey = forwardRef(
           }}
           error={error}
           ref={ref}
-          label='Private key'
+          label='密钥:'
           onChange={onChange}
           value={value}
           placeholder={placeholder}
@@ -38,7 +38,7 @@ PrivateKey.propTypes = {
 
 PrivateKey.defaultProps = {
   value: '',
-  placeholder: 'Your private key',
+  placeholder: '你的密钥',
   onChange: () => {},
   setError: () => {}
 }

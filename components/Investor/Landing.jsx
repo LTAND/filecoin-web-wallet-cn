@@ -109,7 +109,7 @@ export default () => {
           alignSelf='center'
           textAlign='left'
         >
-          <Header>Use your Ledger device to hold your Filecoin SAFT.</Header>
+          <Header>使用钱包设备保存Filecoin SAFT</Header>
           <Title mt={3} lineHeight='140%'>
             <InlineBox
               backgroundColor='status.warning.background'
@@ -121,7 +121,7 @@ export default () => {
               fontSize={4}
               borderRadius={6}
             >
-              Launching this week
+              这一周启动中
             </InlineBox>
           </Title>
         </Box>
@@ -168,7 +168,7 @@ export default () => {
                 flexDirection='column'
               >
                 <MenuItem>
-                  <Title my={3}>Receive an email when we launch</Title>
+                  <Title my={3}>当我们启动时，你会收到电子邮件通知</Title>
                 </MenuItem>
                 <MenuItem textAlign='center'>
                   <Box
@@ -186,7 +186,7 @@ export default () => {
                       px={3}
                       py={3}
                       textAlign='center'
-                      placeholder='Your email'
+                      placeholder='你的邮箱'
                       borderTopLeftRadius={4}
                       borderTopRightRadius={4}
                       onChange={e => setEmail(e.target.value)}
@@ -206,7 +206,7 @@ export default () => {
                       height='max-content'
                       onClick={postToMailChimp}
                     >
-                      Submit
+                      提交
                     </ButtonSignUp>
                   </Box>
                   <Box textAlign='center' my={3}>

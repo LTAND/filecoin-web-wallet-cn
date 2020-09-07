@@ -169,7 +169,7 @@ const Step2 = ({ investor }) => {
         justifyContent='space-between'
         width='100%'
       >
-        <Button title='Back' onClick={back} variant='secondary' mr={2} />
+        <Button title='返回' onClick={back} variant='secondary' mr={2} />
         <Button
           title='My Ledger device is unlocked & Filecoin app open'
           onClick={onClick}

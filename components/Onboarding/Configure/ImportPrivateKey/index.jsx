@@ -76,8 +76,8 @@ export default () => {
               borderColor='core.lightgray'
               m={2}
             >
-              <Title mt={3}>Import</Title>
-              <Text>Please input your private key below</Text>
+              <Title mt={3}>导入密钥</Title>
+              <Text>请在下面输入你的密钥</Text>
               <Input.PrivateKey
                 error={privateKeyError}
                 setError={setPrivateKeyError}
@@ -93,13 +93,13 @@ export default () => {
             justifyContent='space-between'
           >
             <Button
-              title='Back'
+              title='返回'
               onClick={() => setWalletType(null)}
               variant='secondary'
               mr={2}
             />
             <Button
-              title='Next'
+              title='下一步'
               disabled={!!(privateKey.length === 0 || privateKeyError)}
               onClick={instantiateProvider}
               variant='primary'

@@ -116,27 +116,27 @@ export default () => {
               textAlign='center'
               flexGrow='1'
             >
-              {/* <Text>Access via</Text>
+              {/* <Text>Access via</Text> */}
               <ImportWallet
                 onClick={() => onChoose(LEDGER)}
                 Icon={IconLedger}
-                title='Ledger Device'
+                title='连接钱包设备'
                 tag='Most Secure'
                 display='flex'
                 justifyContent='space-between'
                 flexDirection='column'
                 mb={6}
               />
-              <Text mt={0} maxWidth={11}>
-                Securely generate an account to receive your SAFT Filecoin
-              </Text>
+              {/* <Text mt={0} maxWidth={11}>
+                  安全地生成一个帐户来接收您的SAFT文件
+              </Text> */}
               <ImportWallet
                 mb={4}
                 alignSelf='center'
                 onClick={() => router.push('/vault')}
                 glyphAcronym='Ss'
-                title='SAFT Setup'
-              /> */}
+                title='SAFT 项目'
+              />
 
               {devMode && (
                 <Box
@@ -167,12 +167,12 @@ export default () => {
                     title='导入钱包助记词'
                     m={2}
                   />
-                  {/* <ImportWallet
+                  <ImportWallet
                     onClick={() => onChoose(IMPORT_SINGLE_KEY)}
                     glyphAcronym='Pk'
                     title='导入私钥'
                     m={2}
-                  /> */}
+                  />
                   <Button
                     variant='tertiary'
                     title='关闭'

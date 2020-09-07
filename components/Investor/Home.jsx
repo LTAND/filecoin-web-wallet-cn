@@ -236,7 +236,7 @@ export default () => {
         width='100%'
         maxWidth={13}
       >
-        <Button title='Back' onClick={back} variant='secondary' mr={2} />
+        <Button title='返回' onClick={back} variant='secondary' mr={2} />
         <Button
           title={confirmed ? 'Login to CoinList' : 'Generate string'}
           onClick={onClick}

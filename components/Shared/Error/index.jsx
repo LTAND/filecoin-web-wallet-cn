@@ -59,7 +59,7 @@ const ErrorView = ({ description, linkhref, linkDisplay, title }) => {
         </OnboardCard>
       </Box>
       <Box>
-        <Button mt={5} variant='secondary' title='Back' onClick={sendHome} />
+        <Button mt={5} variant='secondary' title='返回' onClick={sendHome} />
       </Box>
     </Box>
   )

@@ -62,7 +62,7 @@ const WarningCard = ({
           </Box>
         </OnboardCard>
         <Box display='flex' justifyContent='space-between'>
-          <Button mt={5} variant='secondary' title='Back' onClick={onBack} />
+          <Button mt={5} variant='secondary' title='返回' onClick={onBack} />
           <Button
             mt={5}
             variant='primary'

@@ -354,7 +354,7 @@ const Send = ({ close }) => {
               <>
                 <Button
                   type='button'
-                  title='Back'
+                  title='返回'
                   variant='secondary'
                   border={0}
                   borderRight={1}

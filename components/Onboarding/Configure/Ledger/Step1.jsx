@@ -37,8 +37,8 @@ const Step1Helper = ({ inUseByAnotherApp, connectedFailure }) => {
             <Title>Oops!</Title>
           </Box>
           <Box color='status.fail.foreground'>
-            <Text mb={2}>We couldn&rsquo;t connect to your Ledger Device.</Text>
-            <Text>Please unlock your Ledger and try again.</Text>
+            <Text mb={2}>无法连接当前钱包设备</Text>
+            <Text>请你再一次解锁当前钱包设备</Text>
           </Box>
         </>
       )}
@@ -53,11 +53,10 @@ const Step1Helper = ({ inUseByAnotherApp, connectedFailure }) => {
           </Box>
           <Box color='status.fail.foreground'>
             <Text mb={2}>
-              Looks like another app is connected to your Ledger device.
+              其他应用已连接到您的钱包设备
             </Text>
             <Text>
-              Please quit any other application using your Ledger device, and
-              try again.
+              请退出其他钱包设备后，再一次连接使用当前你的钱包设备
             </Text>
           </Box>
         </>
@@ -65,10 +64,10 @@ const Step1Helper = ({ inUseByAnotherApp, connectedFailure }) => {
       {!inUseByAnotherApp && !connectedFailure && (
         <>
           <Box display='flex' alignItems='center' mt={4} color='core.nearblack'>
-            <Title>Connect</Title>
+            <Title>连接</Title>
           </Box>
           <Box color='core.nearblack' mt={3}>
-            <Text>Please connect your Ledger to your computer.</Text>
+            <Text>请连接钱包设备</Text>
           </Box>
         </>
       )}
@@ -123,9 +122,9 @@ const Step1 = ({ investor, setStep }) => {
         justifyContent='space-between'
         width='100%'
       >
-        <Button title='Back' onClick={back} variant='secondary' mr={2} />
+        <Button title='返回' onClick={back} variant='secondary' mr={2} />
         <Button
-          title='Yes, my Ledger device is connected.'
+          title='是的,我的钱包设备已连接'
           onClick={async () => {
             const provider = await setLedgerProvider()
             if (provider) setStep(2)
