@@ -1,3 +1,5 @@
+import { fontSize } from "styled-system"
+
 export const baseColors = {
   mono: {
     black: '#000',
@@ -86,12 +88,12 @@ const colors = {
   },
   card: {
     account: {
-      background: core.primary,
-      color: core.secondary
+      background: core.white,
+      color: core.white
     },
     balance: {
-      background: baseColors.mono.transparent,
-      color: core.nearblack
+      background: baseColors.mono.white,
+      color: core.white
     },
     confirmation: {
       background: baseColors.green.light,
@@ -144,11 +146,12 @@ const theme = {
   },
   textStyles: {
     header: {
-      fontSize: 'calc(48px + (48 - 32) * (100vw - 360px) / (1440 - 360))',
+      fontSize: 'calc(28px + (48 - 32) * (100vw - 360px) / (1440 - 360))',
+      minFontSize: 16,
       fontWeight: 400,
       margin: 0,
       lineHeight: 'title',
-      fontFamily: 'RT-Alias-Grotesk'
+      fontFamily: "Eurofighter Expanded",
     },
     bigTitle: {
       fontSize: 6,
@@ -165,7 +168,7 @@ const theme = {
       fontFamily: 'RT-Alias-Grotesk'
     },
     text: {
-      fontSize: 2,
+      fontSize: 3,
       fontColor: core.nearblack,
       fontWeight: 400,
       lineHeight: 'copy',

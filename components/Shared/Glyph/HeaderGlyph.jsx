@@ -10,30 +10,32 @@ const HeaderGlyph = ({ alt, color, text, imageUrl }) => {
       display='flex'
       alignItems='center'
       justifyContent='space-between'
+      margin='auto'
       py={2}
       mr={[0, 6]}
       mb={[3, 0]}
       px={3}
-      borderRadius={4}
-      width={['100%', 'auto']}
-      height='120px'
+      borderRadius={2}
+      width="100%"
+      height='200px'
+      // background: url(${imageUrl}) center no-repeat;
       css={`
-        background: url(${imageUrl}) center no-repeat;
-        background-size: 100%;
-        border-radius: 16px;
+        background: url("/logo-plus.png") center no-repeat;
+        background-size: 372px 117px;
+        border-radius: 10px;
         alt: ${alt};
       `}
     >
-      <IconGlif
+      {/* <IconGlif
         fill='#fff'
         size={7}
         css={`
           transform: rotate(-90deg);
         `}
-      />
-      <Header color={color} ml={3}>
+      /> */}
+      {/* <Header color={color} ml={3}>
         {text}
-      </Header>
+      </Header> */}
     </Box>
   )
 }

@@ -40,6 +40,7 @@ const WarningCard = ({
           color='status.warning.foreground'
           ml={2}
           minHeight={11}
+          margin='auto'
         >
           <Box>
             <Glyph color='status.warning.foreground' acronym='Wn' />

@@ -7,12 +7,12 @@ import useReset from '../../../../utils/useReset'
 const Back = ({ setReturningHome }) => {
   const resetState = useReset()
   return (
-    <Box display='flex' flexDirection='column' alignItems='center' mt={8}>
+    <Box display='flex' flexDirection='column' alignItems='center' mt={8} margin='auto'>
       <Card
         display='flex'
         flexDirection='column'
         justifyContent='space-between'
-        width='100%'
+        width='600px'
       >
         <Glyph acronym='Bk' />
         <Text>你是否要退出到主页</Text>

@@ -11,34 +11,35 @@ const Import = ({
   tag,
   ...props
 }) => (
-  <>
-    <Card
-      display='flex'
-      flexDirection='column'
-      justifyContent='space-between'
-      alignContent='space-between'
-      height={7}
-      p={2}
-      css={`
+    <>
+      <Card
+        display='flex'
+        flexDirection='column'
+        justifyContent='space-between'
+        alignContent='space-between'
+        height={7}
+        p={2}
+        css={`
         cursor: pointer;
+        text-align: center;
         transition: 0.13s ease-in-out;
         &:hover {
           transform: scale(1.05);
         }
       `}
-      role='button'
-      onClick={onClick}
-      {...props}
-    >
-      <Box display='flex' alignItems='center' textAlign='center'>
-        <Glyph Icon={Icon} acronym={glyphAcronym} border={0} />
-        <Text ml={4} my={0}>
-          {title}
-        </Text>
-      </Box>
-    </Card>
-  </>
-)
+        role='button'
+        onClick={onClick}
+        {...props}
+      >
+        <Box display='flex' alignItems='center' textAlign='center' justifyContent='space-around'>
+          {/* <Glyph Icon={Icon} acronym={glyphAcronym} border={0} /> */}
+          <Text ml={4} my={0} margin={2}>
+            {title}
+          </Text>
+        </Box>
+      </Card>
+    </>
+  )
 
 Import.defaultProps = {
   description: '',

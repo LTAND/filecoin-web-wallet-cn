@@ -53,7 +53,7 @@ exports[`HeaderGlyph renders the HeaderGlyph 1`] = `
 
 @media screen and (min-width:40em) {
   .c0 {
-    margin-right: 48px;
+    margin-right: 0px;
     margin-bottom: 0;
   }
 }

@@ -17,14 +17,14 @@ const CreateWallet = ({ onClick, ...props }) => (
     flexDirection='column'
     justifyContent='space-between'
     alignContent='space-between'
-    height={7}
+    // height={7}
     p={2}
     {...props}
   >
     <Box>
-      <Box display='flex' alignItems='center'>
-        <Glyph acronym='Sp' border={0} />
-        <Text ml={4} my={0}>
+      <Box display='flex' alignItems='center' justifyContent='space-around'>
+        {/* <Glyph acronym='Sp' border={0} /> */}
+        <Text ml={4} my={0} margin={2}>
           创建钱包助记词
         </Text>
       </Box>

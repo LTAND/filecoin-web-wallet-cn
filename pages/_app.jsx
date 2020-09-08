@@ -12,6 +12,7 @@ import { WasmLoader } from '../lib/WasmLoader'
 import ErrorBoundary from '../lib/ErrorBoundary'
 import '../stylesheets/normalize.css'
 import '../stylesheets/styles.css'
+import { height } from 'styled-system'
 
 class MyApp extends App {
   static getInitialProps({ ctx: { query, pathname } }) {
@@ -20,26 +21,51 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps, reduxStore, query, pathname } = this.props
+    console.log(this.props)
+    const style_bg = {
+      // backgroundColor:'red'
+      background: "white",
+      height: "100%",
+      display: "flex",
+      justifyContent: "space-around"
+    }
+    const style_cont = {
+      // background: "linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)",
+      
+    }
     return (
       <>
-        <Head>
-          <title>Glif</title>
-        </Head>
-        <Provider store={reduxStore}>
-          <WasmLoader>
-            <ConverterWrapper>
-              <WalletProviderWrapper network={reduxStore.getState().network}>
-                <NetworkChecker pathname={pathname} query={query} />
-                <BalancePoller />
-                <ThemeProvider theme={theme}>
-                  <ErrorBoundary>
-                    <Component {...pageProps} />
-                  </ErrorBoundary>
-                </ThemeProvider>
-              </WalletProviderWrapper>
-            </ConverterWrapper>
-          </WasmLoader>
-        </Provider>
+        <div style={style_bg}>
+
+          <Head>
+            <title>Glif</title>
+          </Head>
+
+          <Provider store={reduxStore}>
+            <WasmLoader>
+
+              <ConverterWrapper>
+
+                <WalletProviderWrapper network={reduxStore.getState().network}>
+                  <div style={style_cont}>
+                    <NetworkChecker pathname={pathname} query={query} />
+
+                    <BalancePoller />
+
+                    <ThemeProvider theme={theme}>
+                      {/* <ErrorBoundary> */}
+                      <Component {...pageProps} />
+                      {/* </ErrorBoundary> */}
+                    </ThemeProvider>
+                  </div>
+                </WalletProviderWrapper>
+
+              </ConverterWrapper>
+
+            </WasmLoader>
+          </Provider>
+
+        </div>
       </>
     )
   }
