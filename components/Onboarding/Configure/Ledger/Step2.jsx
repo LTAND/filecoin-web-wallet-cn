@@ -49,7 +49,7 @@ const Step2Helper = ({
     }) ? (
       <>
         <Box display='flex' alignItems='center' color='status.fail.foreground'>
-          <Title>Oops!</Title>
+          <Title>抱歉!</Title>
         </Box>
         <Box mt={3} color='status.fail.foreground'>
           <Text>

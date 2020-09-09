@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Box, Button, Card, Text, Glyph } from '../../../Shared'
 import useReset from '../../../../utils/useReset'
+import { IconTips } from '../../../Shared/Icons'
 
 const Back = ({ setReturningHome }) => {
   const resetState = useReset()
@@ -12,9 +13,11 @@ const Back = ({ setReturningHome }) => {
         display='flex'
         flexDirection='column'
         justifyContent='space-between'
-        width='600px'
+        width='80vw'
+        maxWidth={600}
       >
-        <Glyph acronym='Bk' />
+        {/* <Glyph acronym='Bk' /> */}
+        <IconTips />
         <Text>你是否要退出到主页</Text>
       </Card>
       <Box mt={6} display='flex' justifyContent='space-between' width='100%'>

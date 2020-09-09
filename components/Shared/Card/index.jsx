@@ -4,7 +4,7 @@ import Box from '../Box'
 const Card = forwardRef(({ ...props }, ref) => (
   <Box
     display='inline-block'
-    width={300}
+    width={400}
     p={3}
     border={1}
     borderRadius={2}

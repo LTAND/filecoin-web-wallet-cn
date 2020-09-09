@@ -20,7 +20,7 @@ const AccountError = ({ errorMsg, onTryAgain, ...props }) => (
     {...props}
   >
     <Box display='flex' alignItems='center' justifyContent='flex-start'>
-      <Glyph mr={3} acronym='Er' color='status.fail.foreground' />
+      {/* <Glyph mr={3} acronym='Er' color='status.fail.foreground' /> */}
       <Text>Error</Text>
     </Box>
     <Box>

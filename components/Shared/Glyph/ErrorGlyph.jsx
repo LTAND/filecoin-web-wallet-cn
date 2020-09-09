@@ -5,7 +5,7 @@ const ErrorGlyph = forwardRef(({ ...props }, ref) => (
   <Glyph
     {...props}
     ref={ref}
-    acronym='Er'
+    // acronym='Er'
     backgroundColor='status.fail.background'
     color='status.fail.foreground'
   />

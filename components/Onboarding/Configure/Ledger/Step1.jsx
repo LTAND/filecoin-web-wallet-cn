@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
+import { IconConnect } from '../../../Shared/Icons'
 import {
   Box,
   Button,
@@ -25,6 +26,7 @@ const Step1Helper = ({ inUseByAnotherApp, connectedFailure }) => {
       justifyContent='space-between'
       borderColor='silver'
       mt={4}
+      width={600}
       minHeight={9}
     >
       {connectedFailure && (
@@ -34,7 +36,7 @@ const Step1Helper = ({ inUseByAnotherApp, connectedFailure }) => {
             alignItems='center'
             color='status.fail.foreground'
           >
-            <Title>Oops!</Title>
+            <Title>抱歉!</Title>
           </Box>
           <Box color='status.fail.foreground'>
             <Text mb={2}>无法连接当前钱包设备</Text>
@@ -49,7 +51,7 @@ const Step1Helper = ({ inUseByAnotherApp, connectedFailure }) => {
             alignItems='center'
             color='status.fail.foreground'
           >
-            <Title>Oops!</Title>
+            <Title>抱歉!</Title>
           </Box>
           <Box color='status.fail.foreground'>
             <Text mb={2}>
@@ -65,8 +67,9 @@ const Step1Helper = ({ inUseByAnotherApp, connectedFailure }) => {
         <>
           <Box display='flex' alignItems='center' mt={4} color='core.nearblack'>
             <Title>连接</Title>
+            <IconConnect ml={2}/>
           </Box>
-          <Box color='core.nearblack' mt={3}>
+          <Box color='core.nearblack' mt={5}>
             <Text>请连接钱包设备</Text>
           </Box>
         </>
@@ -106,7 +109,7 @@ const Step1 = ({ investor, setStep }) => {
           currentStep={investor ? 2 : 1}
           loading={ledger.connecting}
           totalSteps={investor ? 5 : 2}
-          Icon={IconLedger}
+          // Icon={IconLedger}
           error={!!error}
           color={error ? 'status.fail.foreground' : 'core.transparent'}
         />
@@ -133,6 +136,7 @@ const Step1 = ({ investor, setStep }) => {
           ml={2}
         />
       </Box>
+      
     </>
   )
 }

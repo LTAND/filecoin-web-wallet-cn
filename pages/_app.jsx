@@ -21,13 +21,13 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps, reduxStore, query, pathname } = this.props
-    console.log(this.props)
     const style_bg = {
       // backgroundColor:'red'
       background: "white",
       height: "100%",
       display: "flex",
-      justifyContent: "space-around"
+      justifyContent: "space-around",
+      // cursor: "url(../public/static/spacecraft.cur)",
     }
     const style_cont = {
       // background: "linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)",
@@ -38,7 +38,7 @@ class MyApp extends App {
         <div style={style_bg}>
 
           <Head>
-            <title>Glif</title>
+            <title>星际方舟</title>
           </Head>
 
           <Provider store={reduxStore}>

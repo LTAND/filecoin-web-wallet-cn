@@ -5,11 +5,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #4f4f4f;
+  /* cursor: url(../public/static/spacecraft.cur); */
 }
 
 body {
   background: #f6f8fe;
   margin: 0;
+  /* cursor: url(../public/static/spacecraft.cur); */
 }
 
 /* Alias Medium */

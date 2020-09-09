@@ -17,7 +17,7 @@ const Stepper = forwardRef(
   ) => (
     <Box display='flex' ref={ref} {...props}>
       <Text color={textColor} mr={2} my={0}>
-        Step {step}
+        步骤 {step}
       </Text>
       {new Array(totalSteps).fill(true).map((_, i) => (
         /* eslint-disable react/no-array-index-key */

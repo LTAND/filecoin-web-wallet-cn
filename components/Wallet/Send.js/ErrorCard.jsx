@@ -23,7 +23,7 @@ const ErrorCard = ({ error, reset }) => {
       >
         <Box display='flex' alignItems='center'>
           <Glyph
-            acronym='Er'
+            // acronym='Er'
             textAlign='center'
             color='card.error.background'
             borderColor='card.error.foreground'

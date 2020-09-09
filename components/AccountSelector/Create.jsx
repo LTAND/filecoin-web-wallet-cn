@@ -54,7 +54,7 @@ const Create = ({ onClick, loading, nextAccountIndex, errorMsg }) => {
       borderColor='core.primary'
       color='core.primary'
       opacity='1'
-      cursor='pointer'
+      // cursor='pointer'
     >
       <Menu>
         <MenuItem display='flex' alignItems='center'>

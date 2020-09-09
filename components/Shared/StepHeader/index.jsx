@@ -6,6 +6,7 @@ import Stepper from '../Stepper'
 import Loading from '../LoaderGlyph'
 import Glyph from '../Glyph'
 import ErrorGlyph from '../Glyph/ErrorGlyph'
+import { IconError } from '../Icons'
 
 const StepHeader = ({
   currentStep,
@@ -25,9 +26,9 @@ const StepHeader = ({
       width='100%'
     >
       <MenuItem display='flex' justifyContent='space-between'>
-        {error && <ErrorGlyph />}
+        {error && <IconError />}
         {loading && !error && <Loading />}
-        {!loading && !error && <Glyph Icon={Icon} acronym={glyphAcronym} />}
+        {/* {!loading && !error && <Glyph Icon={Icon} acronym={glyphAcronym} />} */}
       </MenuItem>
       {showStepper && (
         <MenuItem>

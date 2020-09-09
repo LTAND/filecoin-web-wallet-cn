@@ -38,7 +38,7 @@ const ErrorView = ({ description, linkhref, linkDisplay, title }) => {
           minHeight={11}
         >
           <Box>
-            <Glyph color='status.fail.foreground' acronym='Er' />
+            {/* <Glyph color='status.fail.foreground' acronym='Er' /> */}
             <Title mt={4} mb={2}>
               {title}
             </Title>

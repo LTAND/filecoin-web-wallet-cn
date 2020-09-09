@@ -49,29 +49,6 @@ export default () => {
 
   const [devMode, setDevMode] = useState(false)
 
-  const style_content = {
-    // background: "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
-    //linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)
-    width: "80vw",
-    minHeight: "575px",
-    minWidth: "412px",
-    margin: "40px 0",
-    borderRadius: "25px",
-    boxShadow: "0 0 20px #a9a9a9"
-  }
-
-  const style_header = {
-    // color: "white",
-    fontsize: "12px"
-  }
-
-  const style_usermode = {
-    minWidth: "400px",
-    width: "540px",
-    borderRadius: "10px",
-    textAlign: "center"
-  }
-
   return (
     <>
       {localWalletType ? (
@@ -91,7 +68,10 @@ export default () => {
             alignItems='center'
             justifyContent='flex-start'
             flexGrow='1'
-            style={style_content}
+            width='80vw'
+            margin='40px 0'
+            borderRadius="25px"
+            boxShadow="0 0 20px #a9a9a9"
           >
             <Box
               display='flex'
@@ -100,10 +80,9 @@ export default () => {
               alignItems='center'
               justifyContent="flex-start"
               alignContent='flex-start'
-              mb={4}
+              mb={0}
               p={4}
               margin='auto'
-              marginBottom={0}
             >
               <HeaderGlyph
                 alt='Source: https://www.nontemporary.com/post/190437968500'
@@ -121,7 +100,7 @@ export default () => {
                 alignSelf='center'
                 textAlign='left'
               >
-                <Header style={style_header}>
+                <Header >
                   Filecoin轻量级钱包
                 </Header>
               </Box>
@@ -133,6 +112,7 @@ export default () => {
                 flexWrap='wrap'
                 justifyContent='space-evenly'
                 margin='auto'
+                mt={8}
               >
                 <Box
                   display='flex'
@@ -142,30 +122,34 @@ export default () => {
                   textAlign='center'
                   flexGrow='1'
                 >
-                  {/* <Text>Access via</Text>
-              <ImportWallet
-                onClick={() => onChoose(LEDGER)}
-                Icon={IconLedger}
-                title='连接钱包设备'
-                tag='Most Secure'
-                display='flex'
-                justifyContent='space-between'
-                flexDirection='column'
-                mb={6}
-              />
-              {/* <Text mt={0} maxWidth={11}>
-                  安全地生成一个帐户来接收您的SAFT文件
-              </Text> */}
-                  <ImportWallet
-                    mb={4}
-                    alignSelf='center'
-                    onClick={() => router.push('/vault')}
-                    glyphAcronym='Ss'
-                    title='SAFT 项目'
-                    width={540}
-                    margin={4}
-                    borderRadius={10}
-                  />
+                  {!devMode && (
+                    <ImportWallet
+                      onClick={() => onChoose(LEDGER)}
+                      Icon={IconLedger}
+                      title='连接钱包设备'
+                      tag='Most Secure'
+                      display='flex'
+                      justifyContent='space-between'
+                      flexDirection='column'
+                      mb={4}
+                      borderRadius={10}
+                    />
+                  )}
+
+
+                  {/* <Text>Access via</Text> */}
+                  {/* <Text mt={0} maxWidth={11}>
+                    安全地生成一个帐户来接收您的SAFT文件
+                  </Text> */}
+                  {!devMode && (
+                    <ImportWallet
+                      mb={4}
+                      alignSelf='center'
+                      onClick={() => router.push('/vault')}
+                      glyphAcronym='Ss'
+                      title='SAFT 项目'
+                      borderRadius={10}
+                    />)}
 
                   {devMode && (
                     <Box
@@ -173,22 +157,21 @@ export default () => {
                       flexDirection='column'
                       alignSelf='center'
                       bg='background.white'
+                      width={400}
+                      p={3}
+                      border={1}
+                      borderWidth={1}
+                      overflow='hidden'
                       mt={3}
-                      px={3}
-                      py={3}
                       border={1}
                       borderRadius={10}
-                      width="100%"
-                      maxWidth={540}
-                      minWidth={300}
                       margin="auto"
-                      // marginBottom={40}
                     >
                       <Box display='flex' alignItems='center' m={2} px={2} justifyContent='space-around'>
                         {/* <Glyph border={1} acronym='Dm' /> */}
                         <Text ml={4} my={0} fontsize={24} margin='auto'>
                           用户模式
-                      </Text>
+                        </Text>
                       </Box>
                       <CreateWallet
                         onClick={() => onChoose(CREATE_MNEMONIC)}
@@ -221,21 +204,41 @@ export default () => {
                         onClick={() => setDevMode(false)}
                       >
                         CLOSE
-                  </Button>
+                      </Button>
                     </Box>
                   )}
+                  {!devMode && (
+                    <DevMode
+                      alignSelf='center'
+                      onClick={() => setDevMode(true)}
+                      glyphAcronym='Dm'
+                      title='用户模式'
+                      justifyContent='space-around'
+                      borderRadius={10}
+                    />
+                  )}
                 </Box>
-                {!devMode && (
-                  <DevMode
-                    mt={1}
-                    alignSelf='center'
-                    onClick={() => setDevMode(true)}
-                    glyphAcronym='Dm'
-                    title='用户模式'
-                    style={style_usermode}
-                    justifyContent='space-around'
-                  />
-                )}
+              </Box>
+              <Box
+                // display='flex'
+                // alignItems='center'
+                // justifyContent='space-between'
+                margin='auto'
+                py={2}
+                mt={2}
+                mb={[3, 0]}
+                px={3}
+                borderRadius={2}
+                width="100%"
+                height='200px'
+                float="right"
+                // background: url(${imageUrl}) center no-repeat;
+                css={`
+                  background: url("/static/astronaut.png") right no-repeat;
+                  background-size: 200px 256px;
+              `}
+              >
+
               </Box>
             </Box>
 

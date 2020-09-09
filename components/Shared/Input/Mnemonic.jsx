@@ -17,7 +17,7 @@ const Mnemonic = forwardRef(
       } catch (err) {
         validMnemonic = false
       }
-      if (mnemonic && !validMnemonic) setError(`Invalid seed phrase.`)
+      if (mnemonic && !validMnemonic) setError(`无效的助记词组.`)
     }
 
     return (

@@ -48,6 +48,12 @@ export default class MyDocument extends Document {
             rel='icon'
             type='image/png'
             sizes='32x32'
+            href='/static/logo-spacecraft.png'
+          />
+          {/* <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
             href='/static/favicon-32x32.png'
           />
           <link
@@ -55,7 +61,7 @@ export default class MyDocument extends Document {
             type='image/png'
             sizes='16x16'
             href='/static/favicon-32x32.png'
-          />
+          /> */}
         </Head>
         <body>
           <Main />

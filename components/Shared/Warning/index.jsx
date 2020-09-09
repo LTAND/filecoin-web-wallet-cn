@@ -6,6 +6,7 @@ import Glyph from '../Glyph'
 import OnboardCard from '../Card/OnboardCard'
 import { StyledATag } from '../Link'
 import { Text, Title } from '../Typography'
+import { IconTips } from '../Icons'
 
 const WarningCard = ({
   description,
@@ -43,7 +44,8 @@ const WarningCard = ({
           margin='auto'
         >
           <Box>
-            <Glyph color='status.warning.foreground' acronym='Wn' />
+            {/* <Glyph color='status.warning.foreground' acronym='Wn' /> */}
+            <IconTips/>
             <Title mt={4} mb={2}>
               {title}
             </Title>
