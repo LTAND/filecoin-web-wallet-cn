@@ -53,7 +53,8 @@ const core = {
   lightgray: baseColors.mono.lightgray,
   silver: baseColors.mono.silver,
   white: baseColors.mono.white,
-  transparent: baseColors.mono.transparent
+  transparent: baseColors.mono.transparent,
+  error:baseColors.red.light
 }
 
 const colors = {
@@ -70,9 +71,9 @@ const colors = {
       color: baseColors.mono.nearblack
     },
     tertiary: {
-      background: baseColors.mono.transparent,
-      borderColor: baseColors.purple.light,
-      color: baseColors.purple.light
+      // background: baseColors.mono.transparent,
+      borderColor: "#4682B4",
+      color: "#4682B4"
     },
     'tertiary-selected': {
       background: baseColors.purple.primary,

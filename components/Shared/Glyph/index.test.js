@@ -47,7 +47,7 @@ describe('Glyph', () => {
     const div = container.querySelector('div')
     expect(div).toHaveStyle(
       `color: ${theme.colors.core.white};
-      background-color: ${theme.colors.core.secondary};`
+      background-color: ${theme.colors.core.primary};`
     )
   })
 })

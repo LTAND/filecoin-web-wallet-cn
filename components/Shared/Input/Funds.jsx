@@ -63,7 +63,7 @@ const Funds = forwardRef(
           .isGreaterThanOrEqualTo(balance)
       ) {
         // user enters a value that's greater than their balance - gas limit
-        setError("The amount must be smaller than this account's balance")
+        setError("输入金额必须小于此帐户的余额")
         return false
       }
 
@@ -181,10 +181,10 @@ const Funds = forwardRef(
               {error}
             </Text>
           ) : (
-            <Label color='core.nearblack'>Amount</Label>
-          )}
+              <Label color='core.nearblack'>金额</Label>
+            )}
         </Box>
-        <Box display='inline-block' width='100%'>
+        <Box display='inline-block' width='100%' >
           <Box
             position='relative'
             display='flex'
@@ -233,6 +233,7 @@ const Funds = forwardRef(
               {...props}
             />
             <DenomTag
+              mt={2}
               top='0px'
               left='0px'
               borderTopRightRadius={2}

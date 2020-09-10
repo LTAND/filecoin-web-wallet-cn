@@ -17,12 +17,12 @@ const setBackgroundColor = ({ completed, empty, valid, importSeedError }) => {
   if (importSeedError && (empty || !valid)) return 'status.fail.background'
   if (!importSeedError && completed) return 'core.primary'
   if (!importSeedError && empty) return 'core.transparent'
-  return 'core.secondary'
+  return 'core.primary'
 }
 
 const setInputColor = ({ completed, importSeedError }) => {
   if (importSeedError) return 'core.nearblack'
-  if (!importSeedError && completed) return 'core.secondary'
+  if (!importSeedError && completed) return 'core.primary'
   return 'core.primary'
 }
 

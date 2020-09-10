@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Box from '../Box'
 import Glyph from '../Glyph'
-import { Text } from '../Typography'
+import { Text, Title, BigTitle } from '../Typography'
 import Button from '../Button'
 
 import { ADDRESS_PROPTYPE, MESSAGE_PROPS } from '../../../customPropTypes'
@@ -23,42 +23,42 @@ const MessageHistoryTable = ({
   total
 }) => {
   return (
-    <Box maxWidth={16} width='100%' border='none'>
+    <Box maxWidth={16} width='100%' border='1px' mt={6}>
       <Box display='flex' alignItems='center' justifyContent='space-between'>
         <Box display='flex' alignItems='center' justifyContent='flex-start' iv>
-          <Glyph mr={3} color='core.primary' acronym='Tx' />
-          <Text color='core.primary'>交易的历史记录</Text>
+          {/* <Glyph mr={3} color='core.primary' acronym='Tx' /> */}
+          <Title color='core.primary'>交易的历史记录</Title>
         </Box>
         <Button variant='secondary' onClick={refresh} title='刷新' />
       </Box>
       {loading ? (
         <LoadingScreen />
       ) : (
-        <>
-          {messages.length > 0 ? (
-            <>
-              {messages.map(msg => (
-                <MessageHistoryRow
-                  address={address}
-                  key={msg.cid}
-                  message={msg}
-                  selectMessage={selectMessage}
+          <>
+            {messages.length > 0 ? (
+              <>
+                {messages.map(msg => (
+                  <MessageHistoryRow
+                    address={address}
+                    key={msg.cid}
+                    message={msg}
+                    selectMessage={selectMessage}
+                  />
+                ))}
+                <ShowMore
+                  paginating={paginating}
+                  showMore={showMore}
+                  confirmed={messages.filter(
+                    ({ status }) => status === 'confirmed'
+                  )}
+                  total={total}
                 />
-              ))}
-              <ShowMore
-                paginating={paginating}
-                showMore={showMore}
-                confirmed={messages.filter(
-                  ({ status }) => status === 'confirmed'
-                )}
-                total={total}
-              />
-            </>
-          ) : (
-            <EmptyHistory />
-          )}
-        </>
-      )}
+              </>
+            ) : (
+                <EmptyHistory />
+              )}
+          </>
+        )}
     </Box>
   )
 }

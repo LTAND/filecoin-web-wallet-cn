@@ -49,10 +49,10 @@ export default () => {
         if (data.code !== 200) {
           dispatch(
             fetchedConfirmedMessagesFailure(
-              new Error('Error fetching from Filscout: ', data.error)
+              new Error('从Filscout获取错误: ', data.error)
             )
           )
-          reportError(12, false, 'Error fetching from Filscout: ', data.error)
+          reportError(12, false, '从Filscout获取错误: ', data.error)
         } else {
           setPage(Number(data.data.pagination.page) + 1)
           const formattedMessages = formatFilscoutMessages(data.data.data)

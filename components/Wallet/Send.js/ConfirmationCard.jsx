@@ -37,7 +37,7 @@ const OtherWalletTypeConfirm = () => {
       <Text color='core.nearblack'>
         To complete the transaction, please review the{' '}
         <TextHighlight>recipient</TextHighlight> and{' '}
-        <TextHighlight>amount</TextHighlight> and click &rdquo;Confirm&rdquo; at
+        <TextHighlight>金额</TextHighlight> and click &rdquo;Confirm&rdquo; at
         the bottom of the page.
       </Text>
       <Text>

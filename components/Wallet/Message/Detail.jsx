@@ -148,7 +148,7 @@ const MessageDetail = ({ address, close, message }) => {
         <Input.Funds
           my={3}
           balance={new FilecoinNumber('0.1', 'fil')}
-          label='Amount'
+          label='金额'
           disabled
           amount={new FilecoinNumber(message.value, 'fil').toAttoFil()}
         />
@@ -168,7 +168,7 @@ const MessageDetail = ({ address, close, message }) => {
           mx={1}
         >
           <Total mt={1} fontSize={4} alignSelf='flex-start'>
-            Total
+            总计
           </Total>
           <Box display='flex' flexDirection='column' textAlign='right' pl={4}>
             <Num

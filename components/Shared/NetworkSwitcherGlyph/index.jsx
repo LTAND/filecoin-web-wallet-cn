@@ -64,22 +64,25 @@ const NetworkSwitcherGlyph = ({ ...props }) => {
     <Box
       display='flex'
       width='100%'
+      flexDirection='row'
       justifyContent='flex-start'
       p={2}
+      height={60}
+      // mt={30}
       {...props}
     >
       <NetworkSwitcherButton
         active={networkFromRedux === TESTNET}
         onClick={() => onNetworkSwitch(TESTNET)}
       >
-        Testnet
+        测试网
       </NetworkSwitcherButton>
       <NetworkSwitcherButton
         active={networkFromRedux === MAINNET}
         onClick={() => onNetworkSwitch(MAINNET)}
         disabled
       >
-        Mainnet
+        主网
       </NetworkSwitcherButton>
     </Box>
   )

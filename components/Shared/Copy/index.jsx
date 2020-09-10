@@ -56,7 +56,7 @@ export const CopyAddress = forwardRef(({ address, ...props }, ref) => {
         }}
       >
         <StyledIconCopyAccountAddress />
-        <LabelCopy mt={0} ml={1} color='core.secondary'>
+        <LabelCopy mt={0} ml={1} color='core.primary'>
           {copied ? 'Copied' : 'Copy'}
         </LabelCopy>
       </Copy>

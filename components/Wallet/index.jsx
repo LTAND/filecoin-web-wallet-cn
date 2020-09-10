@@ -21,6 +21,7 @@ import MsgConfirmer from '../../lib/confirm-message'
 import useWallet from '../../WalletProvider/useWallet'
 import { MESSAGE_HISTORY, SEND, RECEIVE } from './views'
 import reportError from '../../utils/reportError'
+import { IconExit } from '../Shared/Icons'
 
 export default () => {
   const wallet = useWallet()
@@ -61,32 +62,33 @@ export default () => {
           /* Temp implementation to simplistically handle large scale displays. This should be removed and a more dynamic solution introduced e.g https://css-tricks.com/optimizing-large-scale-displays/  */
           max-width: 1440px;
           margin: 0 auto;
+          height: 100vh;
         `}
       >
         <NetworkSwitcherGlyph />
 
-        <Sidebar height='100vh'>
+        <Sidebar>
           {hasLedgerError({ ...ledger, otherError: uncaughtError }) &&
-          showLedgerError ? (
-            <AccountError
-              onTryAgain={onShowOnLedger}
-              errorMsg={reportLedgerConfigError({
-                ...ledger,
-                otherError: uncaughtError
-              })}
-              mb={2}
-            />
-          ) : (
-            <AccountCard
-              onAccountSwitch={onAccountSwitch}
-              color='purple'
-              address={wallet.address}
-              walletType={wallet.type}
-              onShowOnLedger={onShowOnLedger}
-              ledgerBusy={ledgerBusy}
-              mb={2}
-            />
-          )}
+            showLedgerError ? (
+              <AccountError
+                onTryAgain={onShowOnLedger}
+                errorMsg={reportLedgerConfigError({
+                  ...ledger,
+                  otherError: uncaughtError
+                })}
+                mb={2}
+              />
+            ) : (
+              <AccountCard
+                onAccountSwitch={onAccountSwitch}
+                color='purple'
+                address={wallet.address}
+                walletType={wallet.type}
+                onShowOnLedger={onShowOnLedger}
+                ledgerBusy={ledgerBusy}
+                mb={4}
+              />
+            )}
           <BalanceCard
             balance={wallet.balance}
             onReceive={() => onViewChange(RECEIVE)}
@@ -102,11 +104,12 @@ export default () => {
             css={`
               background-color: ${({ theme }) => theme.colors.core.secondary}00;
               &:hover {
-                background-color: ${({ theme }) => theme.colors.core.secondary};
+                background-color: ${({ theme }) => theme.colors.core.error};
               }
             `}
             onClick={() => window.location.reload()}
           >
+            <IconExit mr={2}/>
             登出账号
           </ButtonLogout>
         </Sidebar>

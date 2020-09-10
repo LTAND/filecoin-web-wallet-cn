@@ -9,6 +9,7 @@ import {
   Box as Wrapper,
   Glyph,
   Title,
+  BigTitle,
   Text,
   Menu,
   MenuItem,
@@ -191,15 +192,15 @@ const AccountSelector = ({ premainnetInvestor }) => {
           >
             <Menu m={2}>
               <MenuItem display='flex' alignItems='center' color='core.primary'>
-                <Glyph
+                {/* <Glyph
                   acronym='Sw'
                   bg='core.primary'
                   borderColor='core.primary'
                   color='core.white'
-                />
-                <Title ml={2}>
-                  {premainnetInvestor ? 'Select Account' : 'Switch Accounts'}
-                </Title>
+                /> */}
+                <BigTitle ml={2}>
+                  {premainnetInvestor ? '切换账户' : '切换账户'}
+                </BigTitle>
               </MenuItem>
               <MenuItem>
                 {premainnetInvestor ? (
@@ -209,9 +210,9 @@ const AccountSelector = ({ premainnetInvestor }) => {
                   </Text>
                 ) : (
                   <Text>
-                    Your single{' '}
-                    {wallet.type === LEDGER ? 'Ledger Device ' : '助记词'}{' '}
-                    creates hundreds of individual &quot;accounts&quot;.
+                    你的
+                    {wallet.type === LEDGER ? '钱包设备' : '助记词'}
+                    可以创建多个个人账户.
                     <br />
                   </Text>
                 )}

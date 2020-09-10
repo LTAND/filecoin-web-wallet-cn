@@ -63,7 +63,7 @@ const AccountCard = forwardRef(
         height='300px'
         borderRadius={3}
         p={3}
-        color='card.account.color'
+        color='core.primary'
         bg='card.account.background'
         boxShadow={1}
         ref={ref}
@@ -73,17 +73,17 @@ const AccountCard = forwardRef(
           display='flex'
           alignItems='center'
           justifyContent='flex-start'
-          color='card.account.color'
+          color='core.primary'
         >
-          <Glyph mr={3} color='card.account.color' acronym='Ac' />
-          <Text>账号</Text>
+          {/* <Glyph mr={3} color='card.account.color' acronym='Ac' /> */}
+          <Text fontSize={24}>账号</Text>
         </Box>
-        <Box color='card.account.color'>
+        <Box color='core.primary'>
           <Text m={0}>你的钱包地址</Text>
           <Box display='flex' alignItems='center'>
             <AccountAddress
               fontWeight={1}
-              fontSize={5}
+              fontSize={4}
               margin={0}
               overflow='hidden'
               whiteSpace='nowrap'
@@ -100,17 +100,17 @@ const AccountCard = forwardRef(
               }}
             >
               <StyledIconCopyAccountAddress />
-              <LabelCopy mt={0} ml={1} color='core.secondary'>
-                {copied ? 'Copied' : 'Copy'}
+              <LabelCopy mt={0} ml={1} color='#4682B4'>
+                {copied ? '已复制' : '复制'}
               </LabelCopy>
             </CopyAddress>
           </Box>
         </Box>
-        <Box display='flex'>
+        <Box display='flex' >
           {walletType !== IMPORT_SINGLE_KEY && (
             <Button
               variant='tertiary'
-              title='切换地址'
+              title='切换账户'
               onClick={onAccountSwitch}
               height='max-content'
               p={2}

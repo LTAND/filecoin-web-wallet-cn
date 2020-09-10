@@ -15,6 +15,7 @@ import {
   Input,
   Glyph,
   Text,
+  Title,
   Num,
   Button,
   ButtonClose,
@@ -165,10 +166,10 @@ const Send = ({ close }) => {
       )
     ) {
       if (!isValidAddress(toAddress, toAddressError))
-        setToAddressError('Invalid address.')
+        setToAddressError('无效地址.')
       if (!isValidAmount(value, wallet.balance, valueError))
         setValueError(
-          'Please enter a valid amount that is less than your Filecoin balance.'
+          '请输入小于您的Filecoin余额的有效金额.'
         )
       return
     }
@@ -237,15 +238,15 @@ const Send = ({ close }) => {
             px={3}
           >
             <Box display='flex' alignItems='center'>
-              <Glyph
+              {/* <Glyph
                 acronym='To'
                 color='background.screen'
                 borderColor='core.primary'
                 backgroundColor='core.primary'
-              />
-              <Text color='core.primary' ml={2}>
-                Sending Filecoin
-              </Text>
+              /> */}
+              <Title color='core.primary' ml={2}>
+                Filecoin转账
+              </Title>
             </Box>
             <Box display='flex' alignItems='center'>
               <Stepper
@@ -274,7 +275,7 @@ const Send = ({ close }) => {
                 name='recipient'
                 onChange={e => setToAddress(e.target.value)}
                 value={toAddress}
-                label='Recipient'
+                label='接收方'
                 placeholder='t1...'
                 error={toAddressError}
                 setError={setToAddressError}
@@ -282,8 +283,9 @@ const Send = ({ close }) => {
                 valid={validateAddressString(toAddress)}
               />
               <Input.Funds
+                mt={2}
                 name='amount'
-                label='Amount'
+                label='金额'
                 amount={value.toAttoFil()}
                 onAmountChange={setValue}
                 balance={wallet.balance}
@@ -297,7 +299,7 @@ const Send = ({ close }) => {
                 <Input.Text
                   onChange={noop}
                   denom='FIL'
-                  label='Transaction Fee'
+                  label='手续费'
                   value='< 0.0001'
                   disabled
                 />
@@ -313,7 +315,7 @@ const Send = ({ close }) => {
               px={3}
             >
               <Total fontSize={4} alignSelf='flex-start'>
-                Total
+                总计
               </Total>
               <Box
                 display='flex'

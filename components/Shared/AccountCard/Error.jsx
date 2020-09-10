@@ -21,14 +21,14 @@ const AccountError = ({ errorMsg, onTryAgain, ...props }) => (
   >
     <Box display='flex' alignItems='center' justifyContent='flex-start'>
       {/* <Glyph mr={3} acronym='Er' color='status.fail.foreground' /> */}
-      <Text>Error</Text>
+      <Text>错误</Text>
     </Box>
     <Box>
       <Text margin={0}>{errorMsg}</Text>
     </Box>
     <Box display='flex'>
       <Button
-        title='Try again'
+        title='重试'
         onClick={onTryAgain}
         height='100%'
         backgroundColor='core.transparent'

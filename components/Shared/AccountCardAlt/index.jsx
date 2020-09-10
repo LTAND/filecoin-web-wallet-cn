@@ -46,7 +46,7 @@ const AccountCardAlt = ({
           />
           <Box display='flex' flexDirection='column'>
             <Text fontSize={3} my={0}>
-              Address
+              账户地址
             </Text>
             <Title fontSize={4} my={0}>
               {truncate(address)}
@@ -56,7 +56,7 @@ const AccountCardAlt = ({
 
         <Box display='flex' flexDirection='column'>
           <Text fontSize={3} my={0}>
-            Balance
+            账户余额
           </Text>
           <Title fontSize={4} my={0}>
             {balance}FIL
