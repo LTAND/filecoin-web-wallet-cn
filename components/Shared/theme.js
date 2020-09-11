@@ -72,8 +72,9 @@ const colors = {
     },
     tertiary: {
       // background: baseColors.mono.transparent,
-      borderColor: "#4682B4",
-      color: "#4682B4"
+      borderColor: "#DCDCDC",
+      background:'#DCDCDC',
+      color: "#666666"
     },
     'tertiary-selected': {
       background: baseColors.purple.primary,
@@ -147,7 +148,7 @@ const theme = {
   },
   textStyles: {
     header: {
-      fontSize: 'calc(28px + (48 - 32) * (100vw - 360px) / (1440 - 360))',
+      fontSize: 'calc(24px + (48 - 32) * (100vw - 360px) / (1440 - 360))',
       minFontSize: 16,
       fontWeight: 400,
       margin: 0,

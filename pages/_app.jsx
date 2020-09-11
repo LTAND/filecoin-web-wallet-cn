@@ -24,7 +24,7 @@ class MyApp extends App {
     const style_bg = {
       // backgroundColor:'red'
       background: "white",
-      height: "100%",
+      height: "100vh",
       display: "flex",
       justifyContent: "space-around",
       // cursor: "url(../public/static/spacecraft.cur)",
@@ -35,7 +35,7 @@ class MyApp extends App {
     }
     return (
       <>
-        <div style={style_bg}>
+        {/* <div style={style_bg}> */}
 
           <Head>
             <title>星际方舟</title>
@@ -65,7 +65,7 @@ class MyApp extends App {
             </WasmLoader>
           </Provider>
 
-        </div>
+        {/* </div> */}
       </>
     )
   }

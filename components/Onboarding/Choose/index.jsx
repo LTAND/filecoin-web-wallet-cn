@@ -64,16 +64,18 @@ export default () => {
           <Box
             display='flex'
             flexWrap='wrap'
-            minHeight='90vh'
+            minHeight='640px'
+            height='90vh'
             alignItems='center'
             justifyContent='flex-start'
             flexGrow='1'
             width='80vw'
-            margin='40px 0'
+            margin='0 40px'
             borderRadius="25px"
             boxShadow="0 0 20px #a9a9a9"
           >
             <Box
+              height='100%'
               display='flex'
               width='100%'
               flexDirection='column'
@@ -112,7 +114,7 @@ export default () => {
                 flexWrap='wrap'
                 justifyContent='space-evenly'
                 margin='auto'
-                mt={8}
+                mt={6}
               >
                 <Box
                   display='flex'
@@ -219,7 +221,7 @@ export default () => {
                   )}
                 </Box>
               </Box>
-              <Box
+              {/* <Box
                 // display='flex'
                 // alignItems='center'
                 // justifyContent='space-between'
@@ -239,7 +241,7 @@ export default () => {
               `}
               >
 
-              </Box>
+              </Box> */}
             </Box>
 
           </Box>

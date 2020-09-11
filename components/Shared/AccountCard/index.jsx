@@ -17,6 +17,10 @@ import {
   IMPORT_SINGLE_KEY
 } from '../../../constants'
 
+import {
+  BaseButton as ButtonLogout
+} from '../../Shared'
+
 const CopyAddress = styled(BaseButton)`
   /* !important is declared here to override BaseButton's opacity:0.8 on hover. The only instance of us using this declaration. */
   opacity: 1 !important;
@@ -76,7 +80,7 @@ const AccountCard = forwardRef(
           color='core.primary'
         >
           {/* <Glyph mr={3} color='card.account.color' acronym='Ac' /> */}
-          <Text fontSize={24} m={0} color='green'>账号</Text>
+          <Text fontSize={24} m={0} color='#228B22'>账号</Text>
         </Box>
         <Box color='core.primary'>
           <Text m={0}>你的钱包地址</Text>
@@ -109,15 +113,28 @@ const AccountCard = forwardRef(
         <Box display='flex' >
           {walletType !== IMPORT_SINGLE_KEY && (
             <>
-            <IconSwitch/>
-            <Button
-              variant='tertiary'
-              title='切换账户'
-              onClick={onAccountSwitch}
-              height='max-content'
-              p={2}
-              py={2}
-            />
+              
+              {/* <Button
+                variant='tertiary'
+                title='切换账户'
+                onClick={onAccountSwitch}
+                height='max-content'
+                p={2}
+                py={2}
+              /> */}
+              <ButtonLogout
+                variant='tertiary'
+                width='100%'
+                height='max-content'
+                p={2}
+                py={2}
+                display='flex'
+                alignItems='center'
+                onClick={onAccountSwitch}
+              >
+                <IconSwitch />
+                  切换账户
+              </ButtonLogout>
             </>
           )}
           {walletType === LEDGER && (
@@ -172,7 +189,7 @@ AccountCard.propTypes = {
 
 AccountCard.defaultProps = {
   color: 'white',
-  onShowOnLedger: () => {},
+  onShowOnLedger: () => { },
   ledgerBusy: false
 }
 

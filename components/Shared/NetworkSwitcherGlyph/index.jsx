@@ -67,7 +67,8 @@ const NetworkSwitcherGlyph = ({ ...props }) => {
       flexDirection='row'
       justifyContent='flex-start'
       p={2}
-      height={60}
+      mb={4}
+      mt={2}
       // mt={30}
       {...props}
     >

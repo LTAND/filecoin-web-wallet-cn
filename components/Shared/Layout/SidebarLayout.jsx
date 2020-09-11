@@ -14,9 +14,10 @@ export const Content = styled.div`
   justify-content: center;
   flex-basis: 0;
   flex-grow: 999;
-  margin: 0 0.5rem 6rem 0.5rem;
+  margin: 0 1rem 6rem 1rem;
   min-width: 53%;
-  max-height: 698px;
+  height: 698px;
   border-radius: 10px;
   box-shadow: 0 0 10px #aaaaaa;
+  background-color: #ffffff
 `

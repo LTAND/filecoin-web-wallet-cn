@@ -21,7 +21,7 @@ const HeaderGlyph = ({ alt, color, text, imageUrl }) => {
       // background: url(${imageUrl}) center no-repeat;
       css={`
         background: url("/logo-plus.png") center no-repeat;
-        background-size: 372px 117px;
+        background-size: 360px 100px;
         border-radius: 10px;
         alt: ${alt};
       `}

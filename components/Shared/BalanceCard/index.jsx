@@ -2,7 +2,7 @@ import React, { forwardRef, useState } from 'react'
 import { func, bool } from 'prop-types'
 import Box from '../Box'
 import Button from '../Button'
-import { Num, Label } from '../Typography'
+import { Num, Label, Title } from '../Typography'
 import { FILECOIN_NUMBER_PROP } from '../../../customPropTypes'
 import makeFriendlyBalance from '../../../utils/makeFriendlyBalance'
 import { useConverter } from '../../../lib/Converter'
@@ -27,7 +27,8 @@ const BalanceCard = forwardRef(
         {...props}
       >
         <Box display='flex' flexDirection='row' justifyContent='space-between'>
-          <Label>余额</Label>
+          {/* <Label>余额</Label> */}
+          <Title color='#228B22'>余额</Title>
           <Box
             display='flex'
             flexDirection='row'

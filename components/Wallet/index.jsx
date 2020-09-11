@@ -62,7 +62,6 @@ export default () => {
           /* Temp implementation to simplistically handle large scale displays. This should be removed and a more dynamic solution introduced e.g https://css-tricks.com/optimizing-large-scale-displays/  */
           max-width: 1440px;
           margin: 0 auto;
-          height: 100vh;
         `}
       >
         <NetworkSwitcherGlyph />
