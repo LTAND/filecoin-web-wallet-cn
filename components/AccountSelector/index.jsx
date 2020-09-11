@@ -189,6 +189,7 @@ const AccountSelector = ({ premainnetInvestor }) => {
             alignSelf='center'
             maxWidth={19}
             p={4}
+            height='100vh'
           >
             <Menu m={2}>
               <MenuItem display='flex' alignItems='center' color='core.primary'>

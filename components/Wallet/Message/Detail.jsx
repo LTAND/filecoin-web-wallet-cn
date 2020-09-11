@@ -10,6 +10,7 @@ import {
   Input,
   Glyph,
   Text,
+  Title,
   Label,
   Title as Total,
   Num,
@@ -35,13 +36,14 @@ const MessageDetailCard = styled(Card).attrs(() => ({
   flex-direction: column;
   justify-content: space-between;
   width: auto;
+  border: 0;
   background-color: ${props => props.theme.colors.background.screen};
 `
 
 const TxStatusText = ({ address, from, status }) => {
-  if (status === 'pending') return 'PENDING'
-  if (address === from) return 'SENT'
-  return 'RECEIVED'
+  if (status === 'pending') return '等待中'
+  if (address === from) return '已发送'
+  return '已收到'
 }
 
 TxStatusText.propTypes = {
@@ -92,16 +94,16 @@ const MessageDetail = ({ address, close, message }) => {
         justifyContent='space-between'
       >
         <Box display='flex' flexDirection='row' alignItems='center'>
-          <Glyph
+          {/* <Glyph
             acronym='Td'
             color='background.screen'
             borderColor='core.primary'
             backgroundColor='core.primary'
-          />
+          /> */}
 
-          <Text color='core.primary' ml={2}>
-            Transaction Details
-          </Text>
+          <Title color='core.primary' ml={2}>
+            交易明细
+          </Title>
         </Box>
         <Box display='flex' flexDirection='column'>
           <ButtonClose
@@ -154,7 +156,7 @@ const MessageDetail = ({ address, close, message }) => {
         />
         <Input.Text
           onChange={noop}
-          label='Transfer Fee'
+          label='手续费'
           value={loadingFee ? 'Loading...' : `${fee.toAttoFil()} aFIL`}
           backgroundColor='background.screen'
           disabled
@@ -205,7 +207,7 @@ const MessageDetail = ({ address, close, message }) => {
           mt={6}
         >
           <Label color='core.silver' textAlign='left' m={1}>
-            Message Hash
+            区块哈希值
           </Label>
           <Label
             color='core.silver'
@@ -226,7 +228,7 @@ const MessageDetail = ({ address, close, message }) => {
             href={`https://filscout.io/en/pc/message/${message.cid}`}
           >
             <Label color='core.primary' textAlign='left' m={1}>
-              View on Filscout
+              在Filscout中查看
             </Label>
           </StyledATag>
         </Box>

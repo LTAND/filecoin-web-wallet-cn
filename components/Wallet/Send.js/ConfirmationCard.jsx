@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { typography } from 'styled-system'
 import PropTypes from 'prop-types'
-import { Box, Card, Glyph, Text, Stepper } from '../../Shared'
+import { Box, Card, Glyph, Text,Title, Stepper } from '../../Shared'
 import {
   LEDGER,
   IMPORT_MNEMONIC,
@@ -35,14 +35,12 @@ const OtherWalletTypeConfirm = () => {
   return (
     <>
       <Text color='core.nearblack'>
-        To complete the transaction, please review the{' '}
-        <TextHighlight>recipient</TextHighlight> and{' '}
-        <TextHighlight>金额</TextHighlight> and click &rdquo;Confirm&rdquo; at
-        the bottom of the page.
+        要完成交易，请检查{' '}
+        <TextHighlight>收款方</TextHighlight> 和{' '}
+        <TextHighlight>金额</TextHighlight> ，然后点击底部的 &rdquo;确认&rdquo;按钮
       </Text>
       <Text>
-        <TextHighlight>Remember:</TextHighlight> Transactions are{' '}
-        <TextHighlight>final once sent.</TextHighlight>
+        <TextHighlight>注意:{' '}交易一旦发送即为最终交易</TextHighlight>
       </Text>
     </>
   )
@@ -68,16 +66,16 @@ const ConfirmationCard = ({ walletType }) => {
         justifyContent='space-between'
       >
         <Box display='flex' flexDirection='row' alignItems='center'>
-          <Glyph
+          {/* <Glyph
             acronym='Cf'
             textAlign='center'
             color='card.confirmation.background'
             borderColor='card.confirmation.foreground'
             backgroundColor='card.confirmation.foreground'
-          />
-          <Text color='card.confirmation.foreground' ml={2}>
-            Confirmation
-          </Text>
+          /> */}
+          <Title color='card.confirmation.foreground' ml={2}>
+            确认书
+          </Title>
         </Box>
         <Box display='flex' alignItems='center'>
           <Stepper

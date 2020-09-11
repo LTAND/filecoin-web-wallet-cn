@@ -6,7 +6,7 @@ import Box from '../Box'
 import Glyph from '../Glyph'
 import Button from '../Button'
 import BaseButton from '../Button/BaseButton'
-import { IconCopyAccountAddress } from '../Icons'
+import { IconCopyAccountAddress, IconSwitch } from '../Icons'
 import { Text, Label, Title as AccountAddress } from '../Typography'
 import truncate from '../../../utils/truncateAddress'
 import copyToClipboard from '../../../utils/copyToClipboard'
@@ -76,7 +76,7 @@ const AccountCard = forwardRef(
           color='core.primary'
         >
           {/* <Glyph mr={3} color='card.account.color' acronym='Ac' /> */}
-          <Text fontSize={24}>账号</Text>
+          <Text fontSize={24} m={0} color='green'>账号</Text>
         </Box>
         <Box color='core.primary'>
           <Text m={0}>你的钱包地址</Text>
@@ -108,6 +108,8 @@ const AccountCard = forwardRef(
         </Box>
         <Box display='flex' >
           {walletType !== IMPORT_SINGLE_KEY && (
+            <>
+            <IconSwitch/>
             <Button
               variant='tertiary'
               title='切换账户'
@@ -116,6 +118,7 @@ const AccountCard = forwardRef(
               p={2}
               py={2}
             />
+            </>
           )}
           {walletType === LEDGER && (
             <Button

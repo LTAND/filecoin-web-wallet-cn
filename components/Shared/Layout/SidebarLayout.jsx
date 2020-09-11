@@ -16,7 +16,7 @@ export const Content = styled.div`
   flex-grow: 999;
   margin: 0 0.5rem 6rem 0.5rem;
   min-width: 53%;
-
+  max-height: 698px;
   border-radius: 10px;
   box-shadow: 0 0 10px #aaaaaa;
 `

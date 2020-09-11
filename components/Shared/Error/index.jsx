@@ -8,6 +8,7 @@ import OnboardCard from '../Card/OnboardCard'
 import { StyledATag } from '../Link'
 import { Text, Title } from '../Typography'
 import useReset from '../../../utils/useReset'
+import { IconError } from '../../Shared/Icons'
 
 const ErrorView = ({ description, linkhref, linkDisplay, title }) => {
   const router = useRouter()
@@ -39,6 +40,7 @@ const ErrorView = ({ description, linkhref, linkDisplay, title }) => {
         >
           <Box>
             {/* <Glyph color='status.fail.foreground' acronym='Er' /> */}
+            <IconError />
             <Title mt={4} mb={2}>
               {title}
             </Title>

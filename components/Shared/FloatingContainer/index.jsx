@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Box from '../Box'
 
 export default styled(Box).attrs(() => ({
+  // maxHeight:'550px',
   backgroundColor: 'background.app',
   boxShadow: 2,
   border: 1,

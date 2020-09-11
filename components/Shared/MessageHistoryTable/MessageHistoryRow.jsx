@@ -106,10 +106,10 @@ const MessageHistoryRow = ({
               alignItems='flex-end'
               justifyContent='center'
               ml={4}
-              width={8}
+              width={9}
             >
               <Text color='core.darkgray' m={0}>
-                {dayjs.unix(timestamp).format('MMM DD')}
+                {dayjs.unix(timestamp).format('YYYY-MM-DD')}
               </Text>
             </MenuItem>
           </Menu>

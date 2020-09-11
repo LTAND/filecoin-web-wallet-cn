@@ -347,7 +347,7 @@ const Send = ({ close }) => {
               </Box>
             </Box>
           </Box>
-          <FloatingContainer>
+          <FloatingContainer >
             {step === 2 && wallet.type === LEDGER && !hasError() ? (
               <Text width='100%' textAlign='center' px={4}>
                 Confirm or reject the transaction on your Ledger Device.
@@ -381,7 +381,7 @@ const Send = ({ close }) => {
                   border={0}
                   borderRadius={0}
                   type='submit'
-                  title={step === 1 ? 'Send' : 'Confirm'}
+                  title={step === 1 ? '发送' : '确认'}
                   variant='primary'
                   onClick={noop}
                   css={`
