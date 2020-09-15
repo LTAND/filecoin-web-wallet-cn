@@ -11,6 +11,6 @@ export default props => (
     {...props}
   >
     <Loading width={3} height={3} />
-    <Label mt={3}>Loading...</Label>
+    <Label mt={3}>请稍后...</Label>
   </Box>
 )

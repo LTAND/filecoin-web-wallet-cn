@@ -132,7 +132,7 @@ const AccountCard = forwardRef(
                 alignItems='center'
                 onClick={onAccountSwitch}
               >
-                <IconSwitch />
+                <IconSwitch mr={2}/>
                   切换账户
               </ButtonLogout>
             </>

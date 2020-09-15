@@ -93,14 +93,14 @@ const NodeConnectedWidget = forwardRef(
 
     const nodeConnectedText = () => {
       // Connecting to node..
-      if (connectionStrength === -1) return 'Connecting..'
+      if (connectionStrength === -1) return '正在连接..'
       if (connectionStrength === 0)
         // Could not establish connection with our node
-        return 'Disconnected'
+        return '连接失败'
       // Connected to an unhealthy node
-      if (connectionStrength === 1) return 'Disconnected'
+      if (connectionStrength === 1) return '连接错误'
       // Node connected
-      if (connectionStrength === 2) return 'Connected'
+      if (connectionStrength === 2) return '连接中'
     }
 
     return (

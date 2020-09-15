@@ -24,7 +24,7 @@ const MessageHistoryTable = ({
 }) => {
   return (
     <Box maxWidth={16} width='100%' border='1px' mt={6} pl={6} pr={6} >
-      <Box display='flex' alignItems='center' justifyContent='space-between'>
+      <Box display='flex' alignItems='center' justifyContent='space-between' mb={4}>
         <Box display='flex' alignItems='center' justifyContent='flex-start' iv>
           {/* <Glyph mr={3} color='core.primary' acronym='Tx' /> */}
           <Title color='core.primary'>交易的历史记录</Title>
